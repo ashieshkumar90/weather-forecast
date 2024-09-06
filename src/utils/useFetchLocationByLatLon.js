@@ -12,8 +12,6 @@ export default function useFetchLocation() {
     location.longitude
   );
 
-  // console.log(cityName, cityError);
-
   useEffect(() => {
     if (!navigator.geolocation) {
       setLatLonError("Geolocation is not supported");

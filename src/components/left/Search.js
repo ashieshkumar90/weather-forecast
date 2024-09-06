@@ -3,6 +3,11 @@ import { useState } from "react";
 export default function Search({ handleSearch }) {
   const [searchValue, setSearchValue] = useState("");
 
+  const handleSearchField = (e) => {
+    setSearchValue(e.target.value);
+    handleSearch(searchValue);
+  };
+
   return (
     <div className="flex space-x-2 lg:space-x-4 items-center justify-center bg-gray-100 dark:bg-black2 p-2 rounded-full mt-3 md:mt-0">
       <svg
@@ -20,12 +25,13 @@ export default function Search({ handleSearch }) {
           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
         />
       </svg>
-      <form onSubmit={(e) => handleSearch(e, searchValue)}>
+      {/* <form onSubmit={(e) => handleSearch(e, searchValue)}> */}
+      <form>
         <input
           type="text"
           className="outline-none bg-transparent flex-1 md:w-full"
           placeholder="Search for place"
-          onChange={(e) => setSearchValue(e.target.value)}
+          onChange={(e) => handleSearchField(e)}
           value={searchValue}
         />
       </form>

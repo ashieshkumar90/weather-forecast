@@ -5,8 +5,6 @@ export default function useFetchCityName(latitude, longitude) {
   const [cityName, setCityName] = useState("");
   const [cityError, setCityError] = useState(null);
 
-  console.log(latitude, longitude);
-
   useEffect(() => {
     if (latitude && longitude) fetchCityName();
   }, [latitude, longitude]);

@@ -5,12 +5,15 @@ import Home from "./components/Home";
 import { ApiContext } from "./Contexts";
 import toast, { Toaster } from "react-hot-toast";
 import Shimmer from "./components/Shimmer";
+import useDebouncedSearch from "./utils/useDebouncedSearch";
 
 function App() {
   const [unitGroup, setUnitGroup] = useState("metric");
   const [search, setSearch] = useState("");
+  const debouncedSearch = useDebouncedSearch(search);
+
   const [data, isLoading, weatherError, cityError, latLonError] =
-    useFetchWeather(unitGroup, search);
+    useFetchWeather(unitGroup, debouncedSearch);
   const [measure, setMeasure] = useState({
     temprature: "C",
     distance: "km",
@@ -42,9 +45,8 @@ function App() {
     setMeasure(measure);
   };
 
-  const handleSearch = (e, search) => {
-    e.preventDefault();
-    setSearch(search);
+  const handleSearch = (searchInput) => {
+    setSearch(searchInput);
   };
 
   if (isLoading)

@@ -20,7 +20,6 @@ const useFetchWeather = (unitGroup, searchLocation) => {
 
   const fetchWeatherData = (location) => {
     const url = `${apiEndpoint}${location}?unitGroup=${unitGroup}&key=${WEATHERAPIKEY}&contentType=json`;
-    // console.log(url);
     fetch(url)
       .then((response) => {
         if (!response.ok) {
