@@ -5,7 +5,7 @@ export default function Search({ handleSearch }) {
 
   const handleSearchField = (e) => {
     setSearchValue(e.target.value);
-    handleSearch(searchValue);
+    handleSearch(e.target.value);
   };
 
   return (
