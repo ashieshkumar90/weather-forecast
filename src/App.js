@@ -19,6 +19,8 @@ function App() {
     distance: "km",
   });
 
+  //TODO when invalid city entered reset search text box
+
   useEffect(() => {
     if (weatherError.status === 400) {
       toast.error("Invalid City Name");

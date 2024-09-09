@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 WeatherNow is a sleek and intuitive weather forecast website built with React. It provides real-time weather updates for any location worldwide. Users can easily search for cities and view current weather conditions, including temperature, humidity, wind speed, and more. The site also offers a 7-day forecast, helping users plan their week ahead.
 
@@ -16,5 +16,10 @@ WeatherNow is a sleek and intuitive weather forecast website built with React. I
 
 💡 Whether you’re planning a trip or just curious about the weather, WeatherNow has you covered with accurate and timely forecasts.
 
-# Techstack used: 
+# Techstack used:
+
 React | Context API | Third Party APIs | Custom Hooks
+
+# URL
+
+https://ashieshkumar90.github.io/weather-forecast/

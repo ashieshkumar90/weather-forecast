@@ -26,7 +26,7 @@ export default function Search({ handleSearch }) {
         />
       </svg>
       {/* <form onSubmit={(e) => handleSearch(e, searchValue)}> */}
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
           className="outline-none bg-transparent flex-1 md:w-full"
